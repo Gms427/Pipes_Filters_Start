@@ -13,6 +13,12 @@ namespace CompAndDel
     /// </remarks>
     public interface IPicture
     {
+
+        /// <summary>
+        /// Retorna la ruta de la imagen
+        /// </summary>
+        string Path { get; }
+
         /// <summary>
         /// Retorna el ancho de la imagen.
         /// </summary>
@@ -60,6 +66,7 @@ namespace CompAndDel
         /// Copia la imagen en una nueva imagen.
         /// </summary>
         /// <returns></returns>
+        
         IPicture Clone();
     }
 }

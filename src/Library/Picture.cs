@@ -8,6 +8,10 @@ namespace CompAndDel
 {
     public class Picture : IPicture
     {
+        /// <summary>
+        /// Ruta desde la cual se obtuvo la imagen
+        /// </summary>
+        public string Path { get; }
         private Color[,] matrizColores;
        
         /// <summary>
@@ -15,10 +19,11 @@ namespace CompAndDel
         /// </summary>
         /// <param name="width">Ancho en pixels de la imagen</param>
         /// <param name="height">Altura en pixels de la imagen</param>
-        public Picture(Int32 width, Int32 height)
+        public Picture(Int32 width, Int32 height, string path)
         {
             this.matrizColores = new Color[width, height];
             this.matrizColores.Initialize();
+            this.Path = path;
         }
         /// <summary>
         /// Devuelve el ancho en pixels de la imagen
@@ -90,7 +95,7 @@ namespace CompAndDel
         /// <returns>Clon de la imagen</returns>
         public IPicture Clone()
         {
-            Picture pictureClone = new Picture(this.Width, this.Height);
+            Picture pictureClone = new Picture(this.Width, this.Height, this.Path);
             for (int x = 0; x < pictureClone.Width; x++)
             {
                 for (int y = 0; y < pictureClone.Height; y++)
