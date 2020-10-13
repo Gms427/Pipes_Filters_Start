@@ -27,7 +27,7 @@ namespace CompAndDel
             IPipe pipeSerial = new PipeSerial(filterGreyScale, firstPipeSerialSave);
 
             IPicture newPicture = pipeSerial.Send(picture);
-            provider.SavePicture(newPicture, "picture.jpg");
+            //provider.SavePicture(newPicture, "picture.jpg");
         }
     }
 }
