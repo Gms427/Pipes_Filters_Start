@@ -28,6 +28,10 @@ namespace CompAndDel
 
             IPicture newPicture = pipeSerial.Send(picture);
             provider.SavePicture(newPicture, "picture.jpg");
+
+            IFilter filterPublish = new FilterPublishPicture();
+            filterPublish.Filter(picture);
+            
         }
     }
 }
