@@ -27,11 +27,13 @@ namespace CompAndDel
             IPipe pipeSerial = new PipeSerial(filterGreyScale, firstPipeSerialSave);
 
             IPicture newPicture = pipeSerial.Send(picture);
+
             provider.SavePicture(newPicture, "picture.jpg");
 
             IFilter filterPublish = new FilterPublishPicture();
             filterPublish.Filter(picture);
-            
+
+            //provider.SavePicture(newPicture, "picture.jpg");
         }
     }
 }
