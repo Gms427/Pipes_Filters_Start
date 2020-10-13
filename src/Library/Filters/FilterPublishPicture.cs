@@ -13,7 +13,7 @@ namespace CompAndDel.Filters
         public IPicture Filter(IPicture image)
         {
             TwitterPublisher twitter= new TwitterPublisher();
-            twitter.PublishPicture("picture.jpg");
+            twitter.PublishPicture(image.Path);
             return image;
         }
     }

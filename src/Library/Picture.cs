@@ -95,7 +95,7 @@ namespace CompAndDel
         /// <returns>Clon de la imagen</returns>
         public IPicture Clone()
         {
-            Picture pictureClone = new Picture(this.Width, this.Height);
+            Picture pictureClone = new Picture(this.Width, this.Height, this.Path);
             for (int x = 0; x < pictureClone.Width; x++)
             {
                 for (int y = 0; y < pictureClone.Height; y++)
