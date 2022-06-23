@@ -10,6 +10,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\PII_TwitterApi\src\Library\Library.csproj" />
     <ProjectReference Include="..\..\..\PII_CognitiveAPI\src\Library\Library.csproj" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 </Project>
